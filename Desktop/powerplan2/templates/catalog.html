@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body style = "background-color: #1F3D5C">
+    <br>
+    <h1 style = "background-color: #1F3D5C;
+                 color: white;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 3em;
+                 font-weight: 100">
+                 explore
+    </h1>
+    <h2 style = "background-color: #1F3D5C;
+                 color: white;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 1.5em;
+                 font-weight: 200">
+                 Browse And Find The Course That Is Right For You
+                 <br><br>
+    </h2>
+
+
+<div style = "background-color: #fff;
+              color: #1F3D5C;
+              text-align: center;
+              font-family: Helvetica Neue;
+              font-size: 1.2em;
+              font-weight: 200">
+
+    {{catalog}}
+
+    <style style = "text/css">
+        
+        .highlightRow{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        .hightlightRow td{
+            padding: 10px;
+            border: #1F3D5C 10px solid;
+        }
+        .hightlightRow tr{
+            background: #fff;
+        }
+        .highlightRow tr:hover {
+            background-color: #A3E0FF;
+        }
+
+    </style>
+
+    <table class = "highlightRow"
+           style = "width: 80%; border: 50px solid white"
+           align = "center">
+
+    {% for catalog in catalogs %}
+
+        <tr>
+            <td>{{subjectName}} {{ catalog['CatalogNumber'] }}</td>
+            <td> {{catalog['CourseDescr']}}</td>
+            <td> <a href = "/terms/term_code={{termCode}}/school={{schoolName}}/subject={{subjectName}}/catalog_num={{ catalog['CatalogNumber']}}/course_descr={{catalog['CourseDescr'].replace(' ', '-').replace('/', '-')}}/"> View Details </a> </td>
+        </tr>
+
+    {% endfor %} 	
+    </table>
+
+</div>
+
+<footer style = "font-size: 1.5em;
+                  font-family: Helvetica Neue;
+                  font-weight: 200;
+                  color: White"> 
+  <br>
+  &copy sync 2015 
+</footer>
+
+<br><br><br><br>
+</body>
+
+{% endblock %}
+
+

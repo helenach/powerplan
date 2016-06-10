@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  {{ x }}
+<body style = "background-color: #1F3D5C">
+    <br>
+    <h1 style = "background-color: #1F3D5C;
+                 color: white;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 3em;
+                 font-weight: 100">
+                 Congratulations! You have successfully added {{subjectName}} {{catalogNumber}}
+    </h1>
+  	<div style = "background-color: #fff;
+                  color: #1F3D5C;
+                  font-family: Helvetica Neue;
+                  font-size: 1.2em;
+                  font-weight: 200;
+                  margin-left: 200px;
+                  margin-right: 200px;
+                  border: 10px #A3E0FF solid">
+  		<h3 style = "margin-left: 50px;
+                   font-family: Helvetica Neue;
+                   font-size: 1.2em;
+                   font-weight: 200">
+                   The classes in your backpack are:
+      </h3>
+  		<ul>
+  		{% for class in Backpacked %}
+  			<li> {{class}} </li>
+        <br>
+  		{% endfor %}
+
+        <div style = "text-align: right; margin-right: 50px">
+          <a href ="/clear_backpack" > Clear Backpack </a><br>
+          <a href="/terms/term_code={{termCode}}"> Continue powerplanning! </a> <br>
+        </div>
+
+  	</div> 
+    <br><br>
+
+    <div style = "background-color: #fff;
+                  color: #1F3D5C;
+                  text-align: left;
+                  font-family: Helvetica Neue;
+                  font-size: 1.2em;
+                  font-weight: 200">
+    <style style = "text/css">
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th {
+        font-weight: 500;
+        text-align: center;
+      }
+      tr, td, th {
+        padding: 5px;
+      }
+    </style>
+    <table border="1" style="width:100%">
+    <tr>
+      <th>{{calendar[0]}}</th>
+      <th>{{calendar[1]}}</th>
+      <th>{{calendar[2]}}</th>    
+      <th>{{calendar[3]}}</th>
+      <th>{{calendar[4]}}</th>
+      <th>{{calendar[5]}}</th> 
+    </tr>
+    <tr>
+      <td>{{calendar[6]}}</td>
+      <td>{{calendar[7]}}</td>
+      <td>{{calendar[8]}}</td>    
+      <td>{{calendar[9]}}</td>
+      <td>{{calendar[10]}}</td>
+      <td>{{calendar[11]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[12]}}</td>
+      <td>{{calendar[13]}}</td>
+      <td>{{calendar[14]}}</td>    
+      <td>{{calendar[15]}}</td>
+      <td>{{calendar[16]}}</td>
+      <td>{{calendar[17]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[18]}}</td>
+      <td>{{calendar[19]}}</td>
+      <td>{{calendar[20]}}</td>    
+      <td>{{calendar[21]}}</td>
+      <td>{{calendar[22]}}</td>
+      <td>{{calendar[23]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[24]}}</td>
+      <td>{{calendar[25]}}</td>
+      <td>{{calendar[26]}}</td>    
+      <td>{{calendar[27]}}</td>
+      <td>{{calendar[28]}}</td>
+      <td>{{calendar[29]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[30]}}</td>
+      <td>{{calendar[31]}}</td>
+      <td>{{calendar[32]}}</td>    
+      <td>{{calendar[33]}}</td>
+      <td>{{calendar[34]}}</td>
+      <td>{{calendar[35]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[36]}}</td>
+      <td>{{calendar[37]}}</td>
+      <td>{{calendar[38]}}</td>    
+      <td>{{calendar[39]}}</td>
+      <td>{{calendar[40]}}</td>
+      <td>{{calendar[41]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[42]}}</td>
+      <td>{{calendar[43]}}</td>
+      <td>{{calendar[44]}}</td>    
+      <td>{{calendar[45]}}</td>
+      <td>{{calendar[46]}}</td>
+      <td>{{calendar[47]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[48]}}</td>
+      <td>{{calendar[49]}}</td>
+      <td>{{calendar[50]}}</td>    
+      <td>{{calendar[51]}}</td>
+      <td>{{calendar[52]}}</td>
+      <td>{{calendar[53]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[54]}}</td>
+      <td>{{calendar[55]}}</td>
+      <td>{{calendar[56]}}</td>    
+      <td>{{calendar[57]}}</td>
+      <td>{{calendar[58]}}</td>
+      <td>{{calendar[59]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[60]}}</td>
+      <td>{{calendar[61]}}</td>
+      <td>{{calendar[62]}}</td>    
+      <td>{{calendar[63]}}</td>
+      <td>{{calendar[64]}}</td>
+      <td>{{calendar[65]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[66]}}</td>
+      <td>{{calendar[67]}}</td>
+      <td>{{calendar[68]}}</td>    
+      <td>{{calendar[69]}}</td>
+      <td>{{calendar[70]}}</td>
+      <td>{{calendar[71]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[72]}}</td>
+      <td>{{calendar[73]}}</td>
+      <td>{{calendar[74]}}</td>    
+      <td>{{calendar[75]}}</td>
+      <td>{{calendar[76]}}</td>
+      <td>{{calendar[77]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[78]}}</td>
+      <td>{{calendar[79]}}</td>
+      <td>{{calendar[80]}}</td>    
+      <td>{{calendar[81]}}</td>
+      <td>{{calendar[82]}}</td>
+      <td>{{calendar[83]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[84]}}</td>
+      <td>{{calendar[85]}}</td>
+      <td>{{calendar[86]}}</td>    
+      <td>{{calendar[87]}}</td>
+      <td>{{calendar[88]}}</td>
+      <td>{{calendar[89]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[90]}}</td>
+      <td>{{calendar[91]}}</td>
+      <td>{{calendar[92]}}</td>    
+      <td>{{calendar[93]}}</td>
+      <td>{{calendar[94]}}</td>
+      <td>{{calendar[95]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[96]}}</td>
+      <td>{{calendar[97]}}</td>
+      <td>{{calendar[98]}}</td>    
+      <td>{{calendar[99]}}</td>
+      <td>{{calendar[100]}}</td>
+      <td>{{calendar[101]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[102]}}</td>
+      <td>{{calendar[103]}}</td>
+      <td>{{calendar[104]}}</td>    
+      <td>{{calendar[105]}}</td>
+      <td>{{calendar[106]}}</td>
+      <td>{{calendar[107]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[108]}}</td>
+      <td>{{calendar[109]}}</td>
+      <td>{{calendar[110]}}</td>    
+      <td>{{calendar[111]}}</td>
+      <td>{{calendar[112]}}</td>
+      <td>{{calendar[113]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[114]}}</td>
+      <td>{{calendar[115]}}</td>
+      <td>{{calendar[116]}}</td>    
+      <td>{{calendar[117]}}</td>
+      <td>{{calendar[118]}}</td>
+      <td>{{calendar[119]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[120]}}</td>
+      <td>{{calendar[121]}}</td>
+      <td>{{calendar[122]}}</td>    
+      <td>{{calendar[123]}}</td>
+      <td>{{calendar[124]}}</td>
+      <td>{{calendar[125]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[126]}}</td>
+      <td>{{calendar[127]}}</td>
+      <td>{{calendar[128]}}</td>    
+      <td>{{calendar[129]}}</td>
+      <td>{{calendar[130]}}</td>
+      <td>{{calendar[131]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[132]}}</td>
+      <td>{{calendar[133]}}</td>
+      <td>{{calendar[134]}}</td>    
+      <td>{{calendar[135]}}</td>
+      <td>{{calendar[136]}}</td>
+      <td>{{calendar[137]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[138]}}</td>
+      <td>{{calendar[139]}}</td>
+      <td>{{calendar[140]}}</td>    
+      <td>{{calendar[141]}}</td>
+      <td>{{calendar[142]}}</td>
+      <td>{{calendar[143]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[144]}}</td>
+      <td>{{calendar[145]}}</td>
+      <td>{{calendar[146]}}</td>    
+      <td>{{calendar[147]}}</td>
+      <td>{{calendar[148]}}</td>
+      <td>{{calendar[149]}}</td> 
+    </tr>
+    <tr>
+      <td>{{calendar[150]}}</td>
+      <td>{{calendar[151]}}</td>
+      <td>{{calendar[152]}}</td>    
+      <td>{{calendar[153]}}</td>
+      <td>{{calendar[154]}}</td>
+      <td>{{calendar[155]}}</td> 
+    </tr>
+</table>
+</div>
+    <br><br>
+  <footer style = "font-size: 1.5em;
+                  font-family: Helvetica Neue;
+                  font-weight: 200;
+                  color: White"> 
+  <br>
+  &copy sync 2015 
+</footer>
+  </body>
+  </head> 
+</html>
+

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<html>
+  <head>
+    <title>powerplan by sync</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .tst1 {padding: 10px; margin:1; text-align: center; font-family: Lucida Grande}
+</style>
+  </head>
+
+<body style = "background-color: #fff">
+    <br>
+    <h1 style = "background-color: #fff;
+                 color: #1F3D5C;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 3em;
+                 font-weight: 100">
+                 find your home
+    </h1>
+<div style = "background-color: #fff;
+              background-image: url(http://ns.umich.edu/new/images/15million-gift-CSE-bldg-orig-2012-02-16.jpg);
+              background-position: center;
+              background-size: cover;
+              opacity: 0.5">
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div style = "position: relative;
+              margin-top: -425px">
+    <h3 style = "color: #1F3D5C;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 1.5em;
+                 font-weight: 200">
+                 <br><br>
+                 Please Select A School
+    </h3>
+
+    <p class = "tst1">
+        <select id="select">
+        <option selected disabled value ='' >Select School</option>
+
+        {% for school in schools %}
+            <option value = "/terms/term_code={{termCode}}/school={{school['SchoolCode']}}"> {{ school['SchoolDescr'] }}
+            </option>
+        {% endfor%}
+
+        </select>
+    </p>
+</div>
+
+
+
+
+    <footer style = "color: #1F3D5C;
+                   text-align: bottom;
+                   font-family: Helvetica Neue;
+                   font-size: 1.5em;
+                   font-weight: 200;
+                   margin-left: 15px;
+                   position: absolute;
+                   bottom: 20px;">
+                     &copy sync 2015 
+
+      </footer>
+
+
+
+</body>
+
+<script>
+    document.getElementById("select").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }
+    };
+</script>
+
+
+{% endblock %}

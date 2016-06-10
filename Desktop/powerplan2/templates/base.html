@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+      <title>powerplan by sync</title>
+      <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/picons-basic-1/57/basic1-084_rotate_sync-512.png"/>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      {% endblock %}
+
+     <!--<footer style="font-family: Helvetica Neue;
+      color: #1F3D5C;font-size: 1.5em;
+                   font-weight: 100;margin-left: 15px; margin-bottom: 15px;">&copy sync 2015</footer> -->
+    </div>
+         
+  </body>
+</html>

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <head>
+    <title>Webschedule - login page</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .tst1 {padding: 10px; margin:1; text-align: center; font-family: Lucida Grande}
+</style>
+  </head>
+
+<body style = "background-color: #fff">
+    <br>
+    <h1 style = "background-color: #fff;
+                 color: #1F3D5C;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 3em;
+                 font-weight: 100">
+                 select a specialty
+    </h1>
+<div style = "background-color: #fff;
+              background-image: url(http://www.engin.umich.edu/che/undergraduate/images/che460-lab);
+              background-position: center;
+              background-size: cover;
+              opacity: 0.5">
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div style = "position: relative;
+              margin-top: -425px">
+    <h3 style = "color: #1F3D5C;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 1.5em;
+                 font-weight: 200">
+                 <br><br>
+                 Please Select A Subject
+    </h3>
+
+    <p class = "tst1" >
+        <select id="select">
+        <option selected disabled value ='' >Select Subject</option>
+
+        {% for subject in subjects %}
+            <option value ="/terms/term_code={{termCode}}/school={{schoolName}}/subject={{ subject['SubjectCode'] }}"> {{ subject['SubjectDescr'] }}</option>
+        {% endfor %} 
+
+        </select>
+    </p>
+
+    <h4 style = "color: #1F3D5C;
+                 text-align: center;
+                 font-family: Helvetica Neue;
+                 font-size: 1.5em;
+                 font-weight: 200">
+                 <br><br><br>
+                 Or Search For A Class
+    </h4>
+
+    <p>
+        <form class ="tst1" action="" method="Post">
+            <input type="text" placeholder="e.g. EECS 183 or EECS" name="keyword" >
+            <input type="submit" value="Search!">
+        </form>
+    </p>
+</div><br><br><br><br><br>
+
+    <footer style = "color: #1F3D5C;
+                   text-align: bottom;
+                   font-family: Helvetica Neue;
+                   font-size: 1.5em;
+                   font-weight: 200;
+                   margin-left: 15px;
+                   position: absolute;
+                   bottom: 20px;">
+                     &copy sync 2015 
+
+      </footer>
+
+
+</body>
+
+<script>
+    document.getElementById("select").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }
+    };
+</script>
+
+
+{% endblock %}
+
+
