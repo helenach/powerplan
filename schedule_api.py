@@ -9,7 +9,7 @@ class ScheduleApiError(Exception):
     pass
 
 # The base API endpoint
-base_url = 'http://umich-schedule-api.herokuapp.com'
+base_url = 'http://umich-schedule-api.herokuapp.com/v3'
 
 # the amount of time to wait for the schedule API
 timeout_duration = 25
